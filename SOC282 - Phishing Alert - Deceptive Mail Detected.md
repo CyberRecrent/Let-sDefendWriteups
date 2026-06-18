@@ -46,6 +46,38 @@ Device Action : Allowed
 
 ## Playbook
 
+<img width="1328" height="428" alt="image" src="https://github.com/user-attachments/assets/c4610676-8e47-4fb9-bc83-6cc7f04e75ba" />
+
+
+## IOCs
+
+| Тип | Значение | Описание |
+|-----|----------|----------|
+| Email Domain | coffeeshooop.com | Поддельный домен отправителя |
+| Email Address | free@coffeeshooop.com | Адрес отправителя фишингового письма |
+| SMTP IP | 103.80.134.63 | IP почтового сервера, помечен 9/91 на VT |
+| URL | files-ld.s3.us-east-2.amazonaws.com/...free-coffee.zip | URL для скачивания malware |
+| File | free-coffee.zip | Вредоносный архив (пароль: infected), связан с SilentBuilder/Conti |
+| C2 IP:Port | 37.120.233.226:3451 | Подтверждённый AsyncRAT C2 сервер |
+
+## MITRE ATT&CK Mapping
+| Tactic | Technique | ID |
+|--------|-----------|-----|
+| Initial Access | Phishing: Spearphishing Attachment | T1566.001 |
+| Execution | User Execution: Malicious File | T1204.002 |
+| Discovery | System Information Discovery | T1082 |
+| Discovery | Account Discovery | T1087.001 |
+| Discovery | Process Discovery | T1057 |
+| Discovery | System Network Configuration Discovery | T1016 |
+| Command and Control | Application Layer Protocol | T1071 |
+| Command and Control | Non-Standard Port | T1571 |
+
+## Заключение 
+
+Я изолировал этот хост. Дальше нужно эскалировать этот инцидент на L2, добавить в блок IP-адрес C2 сервера в файрволе. Также заблокировать домен и файл в веб фильтрах.
+
+
+
 
 
 
