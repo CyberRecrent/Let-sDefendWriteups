@@ -9,6 +9,7 @@
 |---|------|-----------|-----------|
 | 1 | SOC176 - RDP Brute Force | Brute Force | True Positive |
 | 2 | SOC257 - VPN Unauthorized Access | Unauthorized Access | True Positive |
+| 3 | SOC282 - Phishing Alert | Phishing | True Positive |
 
 ## Стек
 Wireshark · SIEM · VirusTotal · AbuseIPDB · MITRE ATT&CK · Windows Event Logs
